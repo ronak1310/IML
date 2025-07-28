@@ -1,0 +1,86 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5vh auto;
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 5vh 5vw;
+    gap: 3vh;
+    max-width: 600px;
+    height: auto;
+    overflow: hidden;
+    background-image: url(https://media.istockphoto.com/id/1280251169/photo/world-diabetes-day-awareness-concept-the-diabetic-measures-the-level-of-glucose-in-the-blood.jpg?s=612x612&w=0&k=20&c=I2jo3Upbhc400oRey4QfaFE_0EAuuhn8EvvdHXqFZsM=);
+}
+
+
+h1 {
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+}
+
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.5vh;
+}
+
+input,
+select,
+textarea {
+    padding: 1vh;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 1vh;
+    padding: 1vh 2vw;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+#outcome {
+    margin-top: 2vh;
+    padding: 1vh;
+    background-color: #f5f5f5;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 5vh;
+    max-height: 10vh;
+    overflow: hidden;
+    color: #333;
+}
