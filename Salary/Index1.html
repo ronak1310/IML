@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salary Prediction App</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Salary Prediction System</h1>
+    <form id="form" action="">
+
+      <div class="form-group">
+        <label for="education">Education Level</label>
+        <select id="education" name="education" required>
+          <option value="">--Select--</option>
+          <option value="High School">High School</option>
+          <option value="Bachelor">Bachelor</option>
+          <option value="Master">Master</option>
+          <option value="PhD">PhD</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Years of Experience</label>
+        <input type="number" id="experience" name="experience" required />
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="e.g., Mumbai" required />
+      </div>
+
+      <div class="form-group">
+        <label for="jobtitle">Job Title</label>
+        <input type="text" id="jobtitle" name="jobtitle" placeholder="e.g., Software Engineer" required />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required />
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <button type="submit">Predict Salary</button>
+    </form>
+
+    <div class="outcome">
+      <label for="outcome">Predicted Salary</label>
+      <input type="text" id="outcome" name="outcome" readonly placeholder="₹ Salary will appear here" />
+    </div>
+  </div>
+</body>
+</html>
