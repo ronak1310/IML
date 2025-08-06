@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Salary Prediction App</title>
-  <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+
 </head>
 <body>
   <div class="container">
@@ -60,5 +61,28 @@
       <input type="text" id="outcome" name="outcome" readonly placeholder="₹ Salary will appear here" />
     </div>
   </div>
+<script>
+  const form = document.getElementById('form');
+  const outcomeField = document.getElementById('outcome');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch('/predict', {
+      method: 'POST',
+      body: formData
+    })
+      .then(res => res.json())
+      .then(data => {
+        outcomeField.value = data.salary;
+      })
+      .catch(err => {
+        outcomeField.value = 'Error predicting salary';
+        console.error(err);
+      });
+  });
+</script>
 </body>
 </html>
